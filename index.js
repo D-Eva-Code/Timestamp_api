@@ -28,7 +28,7 @@ app.get('/api/:date?',(req,res)=>{
     let datestring= req.params.date;
     let time;
     if(!isNaN (Number(datestring) )){
-        time= new Date(parseInt(datestring));
+        time= new Date(Number(datestring));//only runs if datestring looks like a number
         }
     else if(!datestring){
         time=new Date();
