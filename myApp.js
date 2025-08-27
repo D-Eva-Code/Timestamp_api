@@ -13,7 +13,7 @@ app.get('/api/:date?',(req,res)=>{
         
     }
     if(isNaN(time.getTime())){
-         return res.json({"error":"\"invalid Date\""});
+         return res.json({"error" : "\"invalid Date\""});
     }
     return res.json({"unix": time.getTime(), "utc": time.toUTCString() });
     
